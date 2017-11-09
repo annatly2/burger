@@ -1,5 +1,5 @@
 //setting up MySQL connection
-var mysql = require (mysql);
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   port: 3306,
@@ -10,12 +10,12 @@ var connection = mysql.createConnection({
 });
 
 //making the connection
-connection.connect(function(err){
-  if (err){
-    console.log("Unfortunately, there was an error connecting: "+ err.stack);
+connection.connect(function(err) {
+  if (err) {
+    console.error("Unfortunately, there was an error connecting: " + err.stack);
     return;
   }
-  console.log("Connected as id " + connection.threadId);
+  console.log("connected as id " + connection.threadId);
 });
 
 //exporting the connection for ORM to use

@@ -1,14 +1,10 @@
-//import burger.js
-
-//create router for the app and export router at the end
+//required dependencies
 var express = require("express");
 var router = express.Router();
+//imports burger.js model in order to use its database functions
 var burger = require("../models/burger.js");
 
-// router.get("/", function(req,res){
-//   res.redirect("/burgers")
-// });
-
+//creates routes and logic
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
     var hbsObject = {
@@ -38,12 +34,8 @@ router.put("/burgers/:id", function(req, res) {
     devoured: true
   }, condition, function(data) {
     res.redirect("/");
-    // if (result.changedRows == 0) {
-    //   return res.status(404).end();
-    // } else {
-    //   res.status(200).end();
-    // }
   });
 });
 
+//exports route for use in server.js
 module.exports = router;

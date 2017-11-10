@@ -1,8 +1,8 @@
-
 <h1>Time To Eat Some Burgers!</h1>
 
       <div id = "newBurger">
-        <h3>New Burgers</h3>
+        <h2>New Burgers</h2>
+        <h3>(To devour a burger, just click on the burger name!)</h3>
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
@@ -15,7 +15,7 @@
       </div>
 
       <div id = "eatenBurger">
-        <h3>Burgers You've Already Tried</h3>
+        <h2>Burgers You've Already Eaten</h2>
         {{#each burgers}}
           {{#if this.devoured}}
             <div class="burgerEaten">
@@ -27,7 +27,7 @@
         {{/each}}
       </div>
 
-<h2>Add a New Burger to the List!</h2>
+  <h2>Add a New Burger to the List!</h2>
 
     <form action="/burgers" method="POST">
       <input type="text" id="name" name="burger_name" placeholder="Add Your Burger Here!">

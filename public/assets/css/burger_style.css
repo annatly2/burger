@@ -7,9 +7,16 @@ h1{
   font-family: 'Lobster', cursive;
   text-align: center;
 }
+
 h2, h3, button, form{
   font-family: 'Lobster', cursive;
   text-align: center;
+}
+
+h3 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: rgb(128, 135, 136);
 }
 
 button{

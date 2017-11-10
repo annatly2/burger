@@ -1,7 +1,7 @@
-//create oRM
-//import MySQL connection
+//import MySQL connection object
 var connection = require("../config/connection.js");
 
+//helper function for generation MySQL syntax
 function printQuestionMarks(num) {
   var arr = [];
   for (var i = 0; i < num; i++) {
@@ -27,7 +27,9 @@ function objToSql(ob){
   return arr.toString();
 }
 
+//creating ORM object to perform SQL queries
 var orm = {
+  //returns all table entries
   selectAll: function(tableInput, cb){
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result){
@@ -37,6 +39,7 @@ var orm = {
       cb(result);
     });
   },
+  //inserts a single table entry
   insertOne: function(table, cols, vals, cb){
     var queryString = "INSERT INTO " + table;
 
@@ -55,6 +58,7 @@ var orm = {
       cb(result);
     });
   },
+  //updates a single table entry
   updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -73,4 +77,5 @@ var orm = {
   }
 };
 
+//exports the orm object for use in other modules
 module.exports = orm;

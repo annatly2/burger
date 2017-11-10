@@ -1,3 +1,42 @@
 body {
   background-image: url("../img/food.png");
 }
+
+h1{
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+h2, h3, button, form{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+button{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 14px;
+}
+
+.burgerEaten, .burgerAvailable{
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+#name{
+  height:70px;
+  font-size:12pt;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+#newBurger, #eatenBurger {
+  float: left;
+  text-align: center;
+  border: 3px solid rgb(225, 65, 47);
+  padding: 15px;
+}

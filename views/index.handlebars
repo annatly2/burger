@@ -1,26 +1,24 @@
 
 <h1>Time To Eat Some Burgers!</h1>
 
-<main>
-  <div class="container">
-		<div class = "row">
-
-      <div class="col-md-6">
+      <div id = "newBurger">
+        <h3>New Burgers</h3>
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
               <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+                <button type="submit" class="burgerAvailable"> {{this.burger_name}}</button>
               </form>
             </div>
           {{/unless}}
         {{/each}}
       </div>
 
-      <div class="col-md-6">
+      <div id = "eatenBurger">
+        <h3>Burgers You've Already Tried</h3>
         {{#each burgers}}
           {{#if this.devoured}}
-            <div class='burgerEaten'>
+            <div class="burgerEaten">
               <div>
                 {{this.burger_name}}
               </div>
@@ -29,18 +27,9 @@
         {{/each}}
       </div>
 
-    </div>
-  </div>
-
-</main>
-
 <h2>Add a New Burger to the List!</h2>
 
-<div class="row">
-  <div class="col-md-12">
     <form action="/burgers" method="POST">
       <input type="text" id="name" name="burger_name" placeholder="Add Your Burger Here!">
-      <button type="submit" class="addBurgerButton">Add The Burger</button>
+      <button type="submit" class="addBurgerButton">Submit</button>
     </form>
-  </div>
-</div>

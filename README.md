@@ -16,4 +16,8 @@ Once you have completed the steps above, type `node server.js` and then open the
 
 You can check your SQL database to see your changes and to see which burgers you have already eaten and which are waiting to be devoured.  
 
+## DEMO
+Demo the app here:
+https://enigmatic-wave-91810.herokuapp.com/
+
 **Have fun and stay hungry!** :hamburger:

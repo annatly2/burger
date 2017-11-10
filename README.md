@@ -1,4 +1,4 @@
-# burger
+# Time To Eat Some Burgers!
 
 Time To Eat Some Burgers! is a restaurant app that allows users to input the names of burgers they'd like to eat.  Once a user submits a burger's name, the new burger will be displayed in the left-most column under "New Burgers", waiting to be devoured.  To devour a burger, the user will just need to click on the burger name, and it will then be displayed in the next column "Burgers You've Already Eaten".  This app will store every burger in a database, whether they have been devoured or not.
 

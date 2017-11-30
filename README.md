@@ -18,6 +18,6 @@ You can check your SQL database to see your changes and to see which burgers you
 
 ## DEMO
 Demo the app here:
-https://enigmatic-wave-91810.herokuapp.com/
+https://eatsomeburgers.herokuapp.com/
 
 **Have fun and stay hungry!** :hamburger:
